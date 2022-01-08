@@ -1,0 +1,19 @@
+{
+  "name": "development",
+  "version": "1.0.0",
+  "description": "Node.js 入門",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haruki-uejima/node-development.git"
+  },
+  "author": "Haruki Uejima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haruki-uejima/node-development/issues"
+  },
+  "homepage": "https://github.com/haruki-uejima/node-development#readme"
+}
