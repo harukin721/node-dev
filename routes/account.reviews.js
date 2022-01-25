@@ -3,13 +3,14 @@ const { MySQLClient, sql } = require("../lib/database/client.js");
 
 router.get("/regist/:shopId(\\d+)", async (req, res, next) => {
   var shopId = req.params.shopId;
-  var shop, shopName, review, resuluts;
+  var shop, shopName, review, results;
+
   try {
-    resuluts = await MySQLClient.executeQuery(
+    results = await MySQLClient.executeQuery(
       await sql("SELECT_SHOP_BASIC_BY_ID"),
       [shopId]
     );
-    shop = resuluts[0] || {};
+    shop = results[0] || {};
     shopName = shop.name;
     review = {};
     res.render("./account/reviews/regist-form.ejs", { shopId, shopName, review });
