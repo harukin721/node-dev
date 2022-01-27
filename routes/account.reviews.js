@@ -85,7 +85,7 @@ router.post("/regist/execute", async (req, res, next) => {
   var error = validateReviewData(req);
   var review = createReviewData(req);
   var { shopId, shopName } = req.body;
-  var userId = "1";     // TODO: ログイン実装後に更新
+  var userId = req.user.id;
   var transaction;
 
   if (error) {
