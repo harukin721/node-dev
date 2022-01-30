@@ -47,7 +47,7 @@ app.use(session({
   },
   secret: appconfig.security.SESSION_SECRET,
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
   name: "sid"
 }));
 app.use(express.urlencoded({ extended: true }));
